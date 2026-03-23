@@ -1,6 +1,6 @@
-# Local Execution Plan: LLM Engineer's Handbook 
+# Local Execution Plan: LLM Twin
 
-Based on the *LLM Engineer's Handbook* (Chapter 2: Tooling and Installation) and the repository's [README.md](file:///c:/Users/nayak/Desktop/Tech/AI%20and%20Related/LLM-Engineers-Handbook/README.md), here is the step-by-step structured plan to run the LLM Twin code on your local machine and generate the output locally.
+Here is the step-by-step structured plan to run the LLM Twin code on your local machine and generate the output locally.
 
 ## Prerequisite Checks
 1. **Docker**: Ensure Docker is installed (≥v27.1.1) and running. This is used to host your local infrastructure (MongoDB, Qdrant, and ZenML server).
@@ -31,7 +31,7 @@ You need to provide your API keys to the system for data collection, experiment 
    ```bash
    cp .env.example .env
    ```
-2. Open [.env](file:///c:/Users/nayak/Desktop/Tech/AI%20and%20Related/LLM-Engineers-Handbook/.env) and fill out the mandatory local variables:
+2. Open [.env] and fill out the mandatory local variables:
    - `OPENAI_API_KEY`: Required for data generation and RAG pipelines.
    - `HUGGINGFACE_ACCESS_TOKEN`: Required to download/upload models.
    - `COMET_API_KEY`: Required for experiment tracking (Comet ML) and prompt monitoring (Opik).
