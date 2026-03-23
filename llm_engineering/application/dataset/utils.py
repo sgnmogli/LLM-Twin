@@ -104,7 +104,7 @@ def filter_answer_format(data: dict[DataCategory, PreferenceDataset]) -> dict[Da
 
 
 def extract_substrings(
-    documents: list[CleanedDocument], min_length: int = 1000, max_length: int = 2000
+    documents: list[CleanedDocument], min_length: int = 100, max_length: int = 2000
 ) -> list[CleanedDocument]:
     extracts = []
     for document in documents:

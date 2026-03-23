@@ -92,7 +92,7 @@ class Settings(BaseSettings):
 
         try:
             logger.info("Loading settings from the ZenML secret store.")
-
+            raise RuntimeError("Bypassing ZenML to prevent Windows TCP hangs")
             settings_secrets = Client().get_secret("settings")
             settings = Settings(**settings_secrets.secret_values)
         except (RuntimeError, KeyError):

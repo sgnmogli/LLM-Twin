@@ -302,14 +302,14 @@ QDRANT_APIKEY=your_qdrant_api_key
 
 #### AWS
 
-For your AWS set-up to work correctly, you need the AWS CLI installed on your local machine and properly configured with an admin user (or a user with enough permissions to create new SageMaker, ECR, and S3 resources; using an admin user will make everything more straightforward).
+For your AWS set-up to work correctly, you need the AWS CLI installed on your local machine and properly configured with an admin user(or a user with enough permissions to create new SageMaker, ECR, and S3 resources; using an admin user will make everything more straightforward).
 
 Chapter 2 provides step-by-step instructions on how to install the AWS CLI, create an admin user on AWS, and get an access key to set up the `AWS_ACCESS_KEY` and `AWS_SECRET_KEY` environment variables. If you already have an AWS admin user in place, you have to configure the following env vars in your `.env` file:
 
 ```bash
 AWS_REGION=eu-central-1 # Change it with your AWS region.
 AWS_ACCESS_KEY=your_aws_access_key
-AWS_SECRET_KEY=your_aws_secret_key
+ AWS_SECRET_KEY=your_aws_secret_key
 ```
 
 AWS credentials are typically stored in `~/.aws/credentials`. You can view this file directly using `cat` or similar commands:
@@ -407,7 +407,7 @@ By this point, we expect you to have AWS CLI installed and your AWS CLI and proj
 
 To ensure best practices, we must create a new AWS user restricted to creating and deleting only resources related to AWS SageMaker. Create it by running:
 ```bash
-poetry poe create-sagemaker-role
+
 ```
 It will create a `sagemaker_user_credentials.json` file at the root of your repository with your new `AWS_ACCESS_KEY` and `AWS_SECRET_KEY` values. **But before replacing your new AWS credentials, also run the following command to create the execution role (to create it using your admin credentials).**
 
